@@ -1,0 +1,22 @@
+{
+  "delta_api_key": "",
+  "delta_api_secret": "cZx3LbL7ItE2WnatP39ll5hqRNqvNJa1g3BHpTK1kPl2GobWyyqyCFjR9FVC",
+  "base_url": "https://api.india.delta.exchange",
+  "product_id": 0,
+  "product_symbol": "PAXGUSD",
+  "resolution": "5m",
+  "key_value": 1,
+  "atr_period": 10,
+  "use_heikin_ashi": true,
+  "lot_size": 1,
+  "num_lots": 1,
+  "fee_amount": 0,
+  "funding_amount": 0,
+  "brokerage_amount": 0,
+  "beta": 2,
+  "support_level": 0,
+  "resistance_level": 0,
+  "sr_lookback": 50,
+  "bot_running": true,
+  "poll_interval_seconds": 1
+}

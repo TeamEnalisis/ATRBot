@@ -12,7 +12,7 @@ matching the Pine Script strategy you provided. Two parts:
 
 ---
 
-## ⚠️ Read before running with real money
+##  Read before running with real money
 
 - This places live orders with **market execution** as soon as a signal
   fires. Test on Delta's **testnet** (`https://cdn-ind.testnet.deltaex.org`)

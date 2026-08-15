@@ -38,7 +38,7 @@ fun DashboardScreen(
             .verticalScroll(rememberScrollState())
             .padding(bottom = 24.dp)
     ) {
-        StatusRow(running = running, subtitle = if (running) "bot polling every ${config?.pollIntervalSeconds ?: 30}s" else "press Start to go live")
+        StatusRow(running = running, subtitle = if (running) "bot polling every ${config?.pollIntervalSeconds ?: 30}s" else "Press Start to go live")
 
         if (errorMessage != null) {
             Text(errorMessage, color = NegativeRed, modifier = Modifier.padding(bottom = 12.dp))
@@ -57,7 +57,7 @@ fun DashboardScreen(
         }
 
         Spacer(Modifier.height(20.dp))
-        SectionHeader("Performance Overview", "Live position and account snapshot")
+        SectionHeader("Performance Overview")
 
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             StatCard(

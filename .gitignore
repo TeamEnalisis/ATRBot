@@ -1,0 +1,15 @@
+# Go
+backend/tradingbot
+backend/config.json
+backend/*.log
+
+# Android / Gradle
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/*.iml
+android/.idea/
+
+# misc
+.DS_Store

@@ -32,7 +32,7 @@ fun ConfigScreen(
             .verticalScroll(rememberScrollState())
             .padding(bottom = 40.dp)
     ) {
-        SectionHeader("Configuration", "Everything the bot needs, saved on your VPS backend")
+        SectionHeader("Configuration")
 
         ConfigGroup("Backend connection") {
             ConfigField("Backend URL", backendUrl, { backendUrl = it }) 
@@ -54,7 +54,7 @@ fun ConfigScreen(
             ConfigField("Candle resolution (1m/5m/15m/1h)", form.resolution, { form = form.copy(resolution = it) })
         }
 
-        ConfigGroup("Strategy (from your Pine script)") {
+        ConfigGroup("Strategy") {
             ConfigField("Key Value / ATR multiplier (a)", form.keyValue.toString(), { form = form.copy(keyValue = it.toDoubleOrNull() ?: form.keyValue) }, KeyboardType.Decimal)
             ConfigField("ATR Period (c)", form.atrPeriod.toString(), { form = form.copy(atrPeriod = it.toIntOrNull() ?: form.atrPeriod) }, KeyboardType.Number)
             ToggleRow("Use Heikin Ashi source", form.useHeikinAshi) { form = form.copy(useHeikinAshi = it) }
@@ -73,7 +73,7 @@ fun ConfigScreen(
             ConfigField("Beta (profit = expenses × beta on top of entry)", form.beta.toString(), { form = form.copy(beta = it.toDoubleOrNull() ?: form.beta) }, KeyboardType.Decimal)
         }
 
-        ConfigGroup("Stop loss (support/resistance)") {
+        ConfigGroup("Stop loss (Support/Resistance)") {
             ConfigField("Support level (0 = auto-detect)", form.supportLevel.toString(), { form = form.copy(supportLevel = it.toDoubleOrNull() ?: form.supportLevel) }, KeyboardType.Decimal)
             ConfigField("Resistance level (0 = auto-detect)", form.resistanceLevel.toString(), { form = form.copy(resistanceLevel = it.toDoubleOrNull() ?: form.resistanceLevel) }, KeyboardType.Decimal)
             ConfigField("Auto S/R lookback (candles)", form.srLookback.toString(), { form = form.copy(srLookback = it.toIntOrNull() ?: form.srLookback) }, KeyboardType.Number)
@@ -89,7 +89,7 @@ fun ConfigScreen(
 
         Spacer(Modifier.height(8.dp))
         Text(
-            "Support/Resistance is used as the stop loss for the opposite side (support for longs, resistance for shorts). Leave both at 0 to let the bot auto-detect recent swing highs/lows.",
+            "Made & Manage with ❤️ by D.P Sharma",
             color = TextSecondary,
             modifier = Modifier.padding(top = 4.dp)
         )
